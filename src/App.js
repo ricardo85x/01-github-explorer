@@ -1,6 +1,6 @@
-export function App() {
+import './styles/global.scss'
 
-    throw new Error('Hustle we have a problem!');
+export function App() {
     
     return <h1>Hello ReactJS</h1>
 }
