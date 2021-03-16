@@ -5,11 +5,6 @@ import '../styles/repositories.scss'
 
 // https://api.github.com/orgs/rocketseat/repos
 
-const repository  = {
-    name: 'unform',
-    description: 'Forms in React',
-    link: 'http://github.com/unform/unform'
-}
 
 export function RepositoryList() {
 
@@ -28,11 +23,10 @@ export function RepositoryList() {
             <h1>Lista de Repositorios</h1>
 
             <ul>
-               
-            <RepositoryItem  repository={repository} />
-            <RepositoryItem />
-            <RepositoryItem />
-     
+                {repositories.map( repository => (
+                    <RepositoryItem key={repository.id}  repository={repository} />
+                ))}
+                    
             </ul>    
         
         </section>
